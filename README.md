@@ -36,3 +36,4 @@ add //= link blog_engine/application.css to manifest.js
 or create blog_engine/config/initializers/assets.rb and add to it:
 
 ```Rails.application.config.assets.precompile += %w( blog_engine/application.css blog_engine/application.js )
+
