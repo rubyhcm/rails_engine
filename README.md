@@ -29,3 +29,10 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 # New app
 rails plugin new blog_engine --mountable
+
+rake blog_engine:install:migrations
+
+add //= link blog_engine/application.css to manifest.js
+or create blog_engine/config/initializers/assets.rb and add to it:
+
+```Rails.application.config.assets.precompile += %w( blog_engine/application.css blog_engine/application.js )
