@@ -1,9 +1,3 @@
-# BlogEngine
-Short description and motivation.
-
-## Usage
-How to use my plugin.
-
 ## Installation
 Add this line to your application's Gemfile:
 
@@ -21,19 +15,13 @@ Or install it yourself as:
 $ gem install blog_engine
 ```
 
-## Contributing
-Contribution directions go here.
+# Run new app
+```rails plugin new blog_engine --mountable```
 
-## License
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+```rake blog_engine:install:migrations```
 
-# New app
-rails plugin new blog_engine --mountable
+add ```//= link blog_engine/application.css``` to ```manifest.js```
 
-rake blog_engine:install:migrations
+or create ```blog_engine/config/initializers/assets.rb``` and add below code into it:
 
-add //= link blog_engine/application.css to manifest.js
-or create blog_engine/config/initializers/assets.rb and add to it:
-
-```Rails.application.config.assets.precompile += %w( blog_engine/application.css blog_engine/application.js )
-
+```Rails.application.config.assets.precompile += %w( blog_engine/application.css blog_engine/application.js )```
